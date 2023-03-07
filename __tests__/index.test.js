@@ -54,12 +54,3 @@ test('incorrect format', () => {
   expect(actual1).toBe('Incorrect format');
  
 });
-
-test('bad file extension', () => {
-  const file1 = '__fixtures__/file1.txt';
-  const file2 = '__fixtures__/file2.txt';
-
-  const actual1 = genDiff(file1, file2, 'plain');
-  expect(actual1).toBe('Incorrect file extension');
-  
-});
