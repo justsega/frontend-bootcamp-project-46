@@ -46,9 +46,8 @@ const creator = {
 };
 const createDiffObject = (obj1, obj2) => {
   const iter = (innerObj1, innerObj2) => {
-    let result = [];
     const commonKeys = _.union(Object.keys(innerObj1), Object.keys(innerObj2));
-    result = commonKeys.map((key) => {
+    const result = commonKeys.map((key) => {
       if (checker.checkNested(innerObj1, innerObj2, key)) {
         return {
           name: key,

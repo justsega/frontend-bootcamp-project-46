@@ -20,10 +20,9 @@ const stringify = (value, depth, spacesCount = 4) => {
 
 const stylish = (object) => {
   const iter = (innerValue, depth, spacesCount = 4) => {
-    let result = '';
     const indentSize = depth * spacesCount - 2;
     const bracketIndent = indentSize - spacesCount + 2;
-    result = innerValue.map((elem) => {
+    const result = innerValue.map((elem) => {
       if (elem.type === 'nested') {
         const children = getChildren(elem);
         return `${' '.repeat(indentSize)}  ${elem.name}: ${iter(children, depth + 1)}`;
