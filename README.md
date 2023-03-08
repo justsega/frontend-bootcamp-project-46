@@ -14,12 +14,4 @@
 
 Генерация отчета в виде 'stylish'
 
-  <div id="player"></div>
-  <script src="asciinema-player.min.js"></script>
-  <script>
-    AsciinemaPlayer.create(
-      '565565.cast',
-      document.getElementById('player'),
-      { cols: 80, rows: 49 }
-    );
-  </script>
+!(https://asciinema.org/a/oQCbgSec5p9yY9Fja1eAQKWMO)
