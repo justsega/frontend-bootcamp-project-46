@@ -4,8 +4,6 @@ import stylish from './stylish.js';
 import json from './json.js';
 
 const chooseFormatter = (diffObject, format) => {
-  console.log(format);
-  console.log('---------------------------DEBUG ZONE-------------------');
   if (format === 'stylish') {
     return stylish(diffObject);
   }
