@@ -1,8 +1,3 @@
-
-const json = (diffObject) => {
-    const result = JSON.stringify(diffObject);
-    console.log(result);
-    return result;
-};
+const json = (diffObject) => JSON.stringify(diffObject);
 
 export default json;

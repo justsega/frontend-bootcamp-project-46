@@ -7,7 +7,6 @@ const getChildren = (parentObject) => {
   return children;
 };
 
-
 const info = () => {
   const firstString = `\n${'-'.repeat(25).bgBlue}INFORMATION${'-'.repeat(25).bgBlue}\n`;
   const addedValues = `${' '.repeat(5).bgGreen} Added values`;
@@ -15,9 +14,9 @@ const info = () => {
   const updatedValues = `${' '.repeat(5).bgMagenta} Updated values`;
   const unchangedValues = `${' '.repeat(5).bgCyan} Unchanged values`;
   const nestedValues = `${' '.repeat(5).bgYellow} Nested values`;
-  const lastString =`\n${'-'.repeat(61).bgBlue}\n`;
-  return [firstString, addedValues, removedValues, updatedValues,unchangedValues, nestedValues, lastString].join('\n');
-}
+  const lastString = `\n${'-'.repeat(61).bgBlue}\n`;
+  return [firstString, addedValues, removedValues, updatedValues, unchangedValues, nestedValues, lastString].join('\n');
+};
 
 const stringify = (value, depth, spacesCount = 4) => {
   if (!_.isObject(value)) {
@@ -32,7 +31,6 @@ const stringify = (value, depth, spacesCount = 4) => {
 };
 
 const formatter = (object) => {
-  
   const iter = (innerValue, depth, spacesCount = 4) => {
     let result = '';
     const indentSize = depth * spacesCount - 2;
@@ -75,13 +73,12 @@ const formatter = (object) => {
     return ['{', ...result, `${' '.repeat(bracketIndent)}}`].join('\n');
   };
   return iter(object, 1);
-
 };
 
 const stylishPlus = (object) => {
   const information = info();
   const formattedText = formatter(object);
   return [information, formattedText].join('\n');
-}
+};
 
 export default stylishPlus;

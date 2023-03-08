@@ -9,8 +9,12 @@ const checker = {
     && !_.isArray(obj2[key]),
   checkAdded: (obj1, obj2, key) => !_.has(obj1, key) && _.has(obj2, key),
   checkRemoved: (obj1, obj2, key) => _.has(obj1, key) && !_.has(obj2, key),
-  checkUpdated: (obj1, obj2, key) => _.has(obj1, key) && _.has(obj2, key) && obj1[key] !== obj2[key],
-  checkUnchanged: (obj1, obj2, key) => _.has(obj1, key) && _.has(obj2, key) && obj1[key] === obj2[key],
+  checkUpdated: (obj1, obj2, key) => _.has(obj1, key)
+    && _.has(obj2, key)
+    && obj1[key] !== obj2[key],
+  checkUnchanged: (obj1, obj2, key) => _.has(obj1, key)
+    && _.has(obj2, key)
+    && obj1[key] === obj2[key],
 };
 
 const creator = {
@@ -41,7 +45,6 @@ const creator = {
   }),
 };
 const createDiffObject = (obj1, obj2) => {
-
   const iter = (innerObj1, innerObj2) => {
     let result = [];
     const commonKeys = _.union(Object.keys(innerObj1), Object.keys(innerObj2));

@@ -1,7 +1,7 @@
 import { test, expect } from '@jest/globals';
-import genDiff from '../src/index.js';
 import fs from 'fs';
 import path from 'path';
+import genDiff from '../src/index.js';
 
 const resultStylish = fs.readFileSync(
   path.resolve(process.cwd(), '__fixtures__/stylish_result.txt'),
@@ -11,10 +11,10 @@ const resultPlain = fs.readFileSync(
   path.resolve(process.cwd(), '__fixtures__/plain_result.txt'),
   'utf-8',
 );
-const resultJSON = fs.readFileSync(
+/* const resultJSON = fs.readFileSync(
   path.resolve(process.cwd(), '__fixtures__/json_result.txt'),
   'utf-8',
-);
+); */
 
 test('json input', () => {
   const file1 = '__fixtures__/file1.json';
@@ -28,7 +28,6 @@ test('json input', () => {
 
   //  const actual3 = genDiff(file1, file2, 'json');
   //  expect(actual3).toBe(resultJSON);
-  
 });
 
 test('yaml input', () => {
@@ -43,7 +42,6 @@ test('yaml input', () => {
 
   //  const actual3 = genDiff(file1, file2, 'json');
   //  expect(actual3).toBe(resultJSON);
-  
 });
 
 test('incorrect format', () => {
@@ -52,5 +50,4 @@ test('incorrect format', () => {
 
   const actual1 = genDiff(file1, file2, 'noFormat');
   expect(actual1).toBe('Incorrect format');
- 
 });
