@@ -17,7 +17,7 @@ const chooseFormatter = (diffObject, format) => {
     return stylishPlus(diffObject);
   }
 
-  throw new Error('Incorrect format');
+  return stylish(diffObject);
 };
 
 export default chooseFormatter;
