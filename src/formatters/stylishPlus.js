@@ -1,4 +1,5 @@
 import _ from 'lodash';
+// eslint-disable-next-line no-unused-vars
 import colors from 'colors';
 
 const getChildren = (parentObject) => {
