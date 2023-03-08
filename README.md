@@ -9,3 +9,9 @@
 
 * Поддержка разных входных форматов: yaml, json
 * Генерация отчета в виде plain text, stylish и json
+
+## Пример использования:
+
+Генерация отчета в виде 'stylish'
+
+https://asciinema.org/a/oQCbgSec5p9yY9Fja1eAQKWMO
