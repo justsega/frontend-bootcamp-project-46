@@ -23,7 +23,7 @@ const parseFile = (file) => {
   if (fileExt === '.yaml' || fileExt === '.yml') {
     return parseYaml(filePath);
   }
-  return 'Incorrect file extension';
+  throw new Error('Incorrect file extension');
 };
 
 export default parseFile;

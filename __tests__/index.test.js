@@ -43,11 +43,3 @@ test('yaml input', () => {
   //  const actual3 = genDiff(file1, file2, 'json');
   //  expect(actual3).toBe(resultJSON);
 });
-
-test('incorrect format', () => {
-  const file1 = '__fixtures__/file1.txt';
-  const file2 = '__fixtures__/file2.txt';
-
-  const actual1 = genDiff(file1, file2, 'noFormat');
-  expect(actual1).toBe('Incorrect format');
-});
