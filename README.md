@@ -14,4 +14,4 @@
 
 Генерация отчета в виде 'stylish'
 
-!https://asciinema.org/a/oQCbgSec5p9yY9Fja1eAQKWMO
+![video](https://asciinema.org/a/oQCbgSec5p9yY9Fja1eAQKWMO)
