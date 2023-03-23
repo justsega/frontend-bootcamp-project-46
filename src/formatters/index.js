@@ -1,5 +1,4 @@
 import plainText from './plain.js';
-import stylishPlus from './stylishPlus.js';
 import stylish from './stylish.js';
 import json from './json.js';
 
@@ -12,9 +11,6 @@ const chooseFormatter = (diffObject, format) => {
   }
   if (format === 'json') {
     return json(diffObject);
-  }
-  if (format === 'stylishPlus') {
-    return stylishPlus(diffObject);
   }
 
   return stylish(diffObject);
