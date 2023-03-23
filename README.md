@@ -1,5 +1,5 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/justsega/frontend-bootcamp-project-46/workflows/hexlet-check/badge.svg)](https://github.com/justsega/frontend-bootcamp-project-46/actions) [![Build CI](https://github.com/justsega/frontend-bootcamp-project-46/actions/workflows/build%20CI.yml/badge.svg)](https://github.com/justsega/frontend-bootcamp-project-46/actions/workflows/build%20CI.yml)[![Test Coverage](https://api.codeclimate.com/v1/badges/b7b5414664122e66e6c5/test_coverage)](https://codeclimate.com/github/justsega/frontend-bootcamp-project-46/test_coverage)
+[![Actions Status](https://github.com/justsega/frontend-bootcamp-project-46/workflows/hexlet-check/badge.svg)](https://github.com/justsega/frontend-bootcamp-project-46/actions) [![Build CI](https://github.com/justsega/frontend-bootcamp-project-46/actions/workflows/build%20CI.yml/badge.svg)](https://github.com/justsega/frontend-bootcamp-project-46/actions/workflows/build%20CI.yml) [![Test Coverage](https://api.codeclimate.com/v1/badges/b7b5414664122e66e6c5/test_coverage)](https://codeclimate.com/github/justsega/frontend-bootcamp-project-46/test_coverage)
 
 # Проект вычислитель отличий
 
@@ -15,6 +15,7 @@
 ### Генерация отчета в виде 'stylish':
 
 ```
+gendiff -f stylish ./file1.yml ./file2.json
 {
     common: {
       + follow: false
@@ -49,6 +50,8 @@
 ### Генерация отчета в виде 'plain':
 
 ```
+gendiff -f plain ./file1.yml ./file2.json
+
 Property 'common.follow' was added with value: false
 Property 'common.setting2' was removed
 Property 'common.setting3' was updated. From true to null
