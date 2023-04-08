@@ -28,28 +28,28 @@ const stylish = (object) => {
         return `${' '.repeat(indentSize)}  ${elem.name}: ${iter(children, depth + 1)}`;
       }
       if (elem.type === 'added') {
-        return `${' '.repeat(indentSize)}${elem.symbol} ${elem.name}: ${stringify(
+        return `${' '.repeat(indentSize)}+ ${elem.name}: ${stringify(
           elem.value,
           depth + 1,
         )}`;
       }
       if (elem.type === 'removed') {
-        return `${' '.repeat(indentSize)}${elem.symbol} ${elem.name}: ${stringify(
+        return `${' '.repeat(indentSize)}- ${elem.name}: ${stringify(
           elem.value,
           depth + 1,
         )}`;
       }
       if (elem.type === 'unchanged') {
-        return `${' '.repeat(indentSize)}${elem.symbol} ${elem.name}: ${stringify(
+        return `${' '.repeat(indentSize)}  ${elem.name}: ${stringify(
           elem.value,
           depth + 1,
         )}`;
       }
       if (elem.type === 'updated') {
-        return `${' '.repeat(indentSize)}${elem.symbol.oldValue} ${elem.name}: ${stringify(
+        return `${' '.repeat(indentSize)}- ${elem.name}: ${stringify(
           elem.oldValue,
           depth + 1,
-        )}\n${' '.repeat(indentSize)}${elem.symbol.newValue} ${elem.name}: ${stringify(
+        )}\n${' '.repeat(indentSize)}+ ${elem.name}: ${stringify(
           elem.newValue,
           depth + 1,
         )}`;
