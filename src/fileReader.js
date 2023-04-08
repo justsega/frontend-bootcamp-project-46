@@ -7,4 +7,4 @@ export const readFileContent = (file) => {
   return buffer;
 };
 
-export const getFileExtension = (file) => path.extname(file);
+export const getFileFormat = (file) => path.extname(file).slice(1);
